@@ -23,7 +23,7 @@ One month later, **WannaCry** ransomware used EternalBlue to infect over 200,000
 - **Impact:** Remote Code Execution (RCE)
 
 By sending a malformed packet to port 445, an attacker overflows a buffer in SMBv1
-and gains code execution — no credentials required.
+and gains code execution - no credentials required.
 
 ---
 
