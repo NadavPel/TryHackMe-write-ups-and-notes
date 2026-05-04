@@ -8,8 +8,8 @@ A collection of my write-ups, notes, and solutions from TryHackMe rooms as I pro
 - [ ] Jr. Penetration Tester
 
 ## 📁 Structure
-- `/writeups` — Room solutions and walkthroughs
-- `/notes` — Concept notes and cheatsheets
+- `/writeups` - Room solutions and walkthroughs
+- `/notes` - Concept notes and cheatsheets
 
 ## 🔧 Topics Covered
 - Networking (OSI, TCP/IP, Nmap, Wireshark)
