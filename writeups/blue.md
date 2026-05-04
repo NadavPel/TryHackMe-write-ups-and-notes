@@ -18,7 +18,7 @@ One month later, **WannaCry** ransomware used EternalBlue to infect over 200,000
 ## Vulnerability
 
 - **CVE:** MS17-010  
-- **Protocol:** SMB — Port 445  
+- **Protocol:** SMB - Port 445  
 - **Type:** Buffer overflow in SMBv1  
 - **Impact:** Remote Code Execution (RCE)
 
@@ -60,7 +60,7 @@ run
 ```bash
 migrate <lsass-pid>
 ```
-Migrating to lsass.exe is necessary for credential dumping —
+Migrating to lsass.exe is necessary for credential dumping -
 it's the process responsible for handling authentication in Windows.
 
 ### 4. Dump and crack hashes
@@ -74,6 +74,6 @@ john --format=nt --wordlist=/usr/share/wordlists/rockyou.txt hash.txt
 ## Lessons Learned
 
 - SMBv1 on port 445 = critical attack surface. Disable it.
-- lsass.exe holds the keys to the kingdom — always a migration target
+- lsass.exe holds the keys to the kingdom - always a migration target
 - A 2017 public exploit still works on unpatched Windows machines 
 - The gap between "knowing the theory" and "running the exploit" is smaller than I expected
