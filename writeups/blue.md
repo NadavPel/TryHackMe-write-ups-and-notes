@@ -75,5 +75,5 @@ john --format=nt --wordlist=/usr/share/wordlists/rockyou.txt hash.txt
 
 - SMBv1 on port 445 = critical attack surface. Disable it.
 - lsass.exe holds the keys to the kingdom — always a migration target
-- A 2017 public exploit still works on unpatched Windows machines in 2024
+- A 2017 public exploit still works on unpatched Windows machines 
 - The gap between "knowing the theory" and "running the exploit" is smaller than I expected
