@@ -145,5 +145,5 @@ still points to it.
 > the real attack here isn't just finding the flag, it's that 
 > an attacker could register the exposed S3 bucket name and 
 > take over the subdomain entirely.
-
+---
 
