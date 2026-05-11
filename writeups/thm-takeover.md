@@ -107,6 +107,18 @@ This is a reportable finding in a pentest report because it exposes internal inf
 
 ---
 
+**What is an S3 Bucket?**
+S3 (Simple Storage Service) is AWS's cloud storage solution — essentially a folder 
+in the cloud used to store files like images, backups, logs, and static assets.
+
+A common misconfiguration is leaving a bucket **publicly accessible**, allowing 
+anyone to list or download its contents. Combined with a leaked bucket name (like 
+in this challenge), an attacker could potentially access sensitive files or even 
+perform a **Subdomain Takeover** if the bucket no longer exists but the SAN record 
+still points to it.
+
+---
+
 ## Concepts Learned
 
 | Concept | Explanation |
@@ -124,3 +136,10 @@ This is a reportable finding in a pentest report because it exposes internal inf
 ## Key Takeaway
 
 **Always inspect SSL certificates** — SANs can contain hidden subdomains that can't be found any other way. It's an information source most people completely overlook.
+
+---
+
+> **Fun fact:** This room is called "Takeover" for a reason — 
+> the real attack here isn't just finding the flag, it's that 
+> an attacker could register the exposed S3 bucket name and 
+> take over the subdomain entirely.
