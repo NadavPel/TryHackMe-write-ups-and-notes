@@ -107,9 +107,21 @@ This is a reportable finding in a pentest report because it exposes internal inf
 
 ---
 
-**What is an S3 Bucket?**
-S3 (Simple Storage Service) is AWS's cloud storage solution — essentially a folder 
-in the cloud used to store files like images, backups, logs, and static assets.
+## Real-World Relevance
+
+This challenge simulates a real **information disclosure** vulnerability.
+
+In real penetration tests, SSL certificates are public — anyone can read them.
+If a developer registers an internal or sensitive domain as a SAN (e.g. internal 
+AWS bucket, staging server, admin panel), it becomes visible to anyone who inspects 
+the certificate.
+
+This is a reportable finding in a pentest report because it exposes internal 
+infrastructure that was never meant to be public.
+
+**What is an S3 Bucket?** S3 (Simple Storage Service) is AWS's cloud storage 
+solution — essentially a folder in the cloud used to store files like images, 
+backups, logs, and static assets.
 
 A common misconfiguration is leaving a bucket **publicly accessible**, allowing 
 anyone to list or download its contents. Combined with a leaked bucket name (like 
@@ -143,3 +155,5 @@ still points to it.
 > the real attack here isn't just finding the flag, it's that 
 > an attacker could register the exposed S3 bucket name and 
 > take over the subdomain entirely.
+
+
