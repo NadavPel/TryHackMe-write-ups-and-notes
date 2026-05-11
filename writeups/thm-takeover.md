@@ -96,16 +96,6 @@ flag{beea0d6edfcee06a59b83fb50ae81b2f}.s3-website-us-west-3.amazonaws.com
 The flag was embedded as a SAN pointing to an AWS S3 bucket.
 
 ---
-## Real-World Relevance
-
-This challenge simulates a real **information disclosure** vulnerability.
-
-In real penetration tests, SSL certificates are public — anyone can read them.
-If a developer registers an internal or sensitive domain as a SAN (e.g. internal AWS bucket, staging server, admin panel), it becomes visible to anyone who inspects the certificate.
-
-This is a reportable finding in a pentest report because it exposes internal infrastructure that was never meant to be public.
-
----
 
 ## Real-World Relevance
 
