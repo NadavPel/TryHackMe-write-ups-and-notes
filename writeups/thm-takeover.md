@@ -40,7 +40,8 @@ gobuster vhost -u "https://futurevera.thm" \
 Without this, the browser doesn't know where to go — the domain doesn't exist in real DNS.
 
 ```
-10.10.x.x    futurevera.thm blog.futurevera.thm support.futurevera.thm
+10.10.x.x      support.futurevera.thm
+10.10.x.x      blog.futurevera.thm 
 ```
 
 **Note:** Status 421 (Misdirected Request) occurs when the server receives a request but doesn't recognize the domain. The fix is adding the domain to `/etc/hosts` so the request arrives with the correct Host header.
